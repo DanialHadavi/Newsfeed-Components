@@ -1,12 +1,12 @@
 /* This is the data we will be using, study it but don't change anything, yet. */
 
 let menuItems = [
-  'Students',
-  'Faculty',
+  "Students",
+  "Faculty",
   "What's New",
-  'Tech Trends',
-  'Music',
-  'Log Out'
+  "Tech Trends",
+  "Music",
+  "Log Out"
 ];
 
 /* 
@@ -18,8 +18,20 @@ let menuItems = [
       {each menu item as a list item}
     </ul>
   </div>
+ */
 
-  The function takes an array as its only argument.
+function createMenu(arr) {
+  const mContainer = document.createElement("div");
+  const items = document.createElement("ul");
+
+  mContainer.append(items);
+
+  mContainer.classList.add("menu");
+
+  return mContainer;
+}
+
+/*The function takes an array as its only argument.
 
   Step 2: Inside this function, iterate over the array creating a list item <li> element for each item in the array. 
   Add those items to the <ul>
