@@ -28,8 +28,21 @@ function createMenu(arr) {
 
   mContainer.classList.add("menu");
 
+  arr.forEach(item => {
+    let menuListItem = document.createElement("li");
+    menuListItem.textContent = item;
+    items.appendChild(menuListItem);
+  });
+
+  const menuBtn = document.querySelector(".menu-button");
+  menuBtn.addEventListener("click", () => {
+    mContainer.classList.toggle("menu--open");
+  });
+
   return mContainer;
 }
+
+document.querySelector(".header").appendChild(createMenu(menuItems));
 
 /*The function takes an array as its only argument.
 
